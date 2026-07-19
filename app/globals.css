@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-goddess-blush text-goddess-ink font-body;
+  }
+  ::selection {
+    @apply bg-goddess-gold-light text-goddess-plum-deep;
+  }
+  :focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    @apply font-body text-xs tracking-[0.28em] uppercase;
+  }
+  .container-x {
+    @apply mx-auto max-w-6xl px-6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
